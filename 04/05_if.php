@@ -5,11 +5,9 @@ $num = trim(fgets(STDIN));
 
 if ($num == 1) {
     $msg = '素数ではありません';
-} elseif ($num == 2) {
-    $msg = '素数です';
 } else {
-    for ($i = 2; $i < $num; $i++) {
-        if ($num % $i == 0) {
+    for ($i = 2; $i <= $num; $i++) {
+        if ($num % $i == 0 && $i != $num) {
             $msg = '素数ではありません';
             break;
         } else {
