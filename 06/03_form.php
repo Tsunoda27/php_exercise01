@@ -1,15 +1,15 @@
 <?php
 
-$msg = '';
+$age = '';
 $err_msg = '';
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $msg = $_POST['age'];
+    $age = $_POST['age'];
 
-    if (empty($msg)) {
+    if (empty($age)) {
         $err_msg = '年齢を入力してください';
     } else {
-        $msg = '私は' . $_POST['age'] . '歳です';
+        $age = '私は' . $_POST['age'] . '歳です';
     }
 }
 ?>
@@ -41,7 +41,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         </div>
     </form>
     <div>
-        <?= htmlspecialchars($msg, ENT_QUOTES, 'UTF-8') ?>
+        <?= htmlspecialchars($age, ENT_QUOTES, 'UTF-8') ?>
     </div>
     </form>
 </body>

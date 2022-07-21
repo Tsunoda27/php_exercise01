@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $num2 = $_POST['num2'];
     $num3 = $_POST['num3'];
 
-    if (empty($num1 || $num2 || $num3)) {
+    if (empty(is_numeric($num1)) || empty(is_numeric($num2)) || empty(is_numeric($num3))) {
         $err_msg = '全てに数字を入力してください';
     } else {
         $answer = $num1 + $num2 + $num3;
